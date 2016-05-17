@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ffv-Do-OBI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zqf-JL-elQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ffv-Do-OBI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yKo-Bg-q7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hGb-uX-KgT" kind="relationship" relationship="rootViewController" id="sKk-CL-bst"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vka-4Y-mRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372.5" y="235.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vng-Al-gHO">
+            <objects>
+                <viewController id="28C-Ma-DPI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Hv-75-qfH"/>
+                        <viewControllerLayoutGuide type="bottom" id="qbp-gM-eon"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rBi-ow-1Xc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nky-St-KR2" customClass="ReflectionView">
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl" translatesAutoresizingMaskIntoConstraints="NO" id="wLC-Ar-cBe">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wLC-Ar-cBe" firstAttribute="centerY" secondItem="nky-St-KR2" secondAttribute="centerY" id="GGn-kN-a5X"/>
+                                    <constraint firstItem="wLC-Ar-cBe" firstAttribute="height" secondItem="nky-St-KR2" secondAttribute="height" id="eIO-Y9-UkB"/>
+                                    <constraint firstItem="wLC-Ar-cBe" firstAttribute="width" secondItem="nky-St-KR2" secondAttribute="width" id="fNm-Gw-kiG"/>
+                                    <constraint firstAttribute="width" secondItem="nky-St-KR2" secondAttribute="height" multiplier="1:1" id="i9a-8G-Z50"/>
+                                    <constraint firstItem="wLC-Ar-cBe" firstAttribute="centerX" secondItem="nky-St-KR2" secondAttribute="centerX" id="xpw-kX-Yb1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nky-St-KR2" firstAttribute="centerY" secondItem="rBi-ow-1Xc" secondAttribute="centerY" id="AqS-YI-Etb"/>
+                            <constraint firstItem="nky-St-KR2" firstAttribute="centerX" secondItem="rBi-ow-1Xc" secondAttribute="centerX" id="BDD-RY-MhM"/>
+                            <constraint firstItem="nky-St-KR2" firstAttribute="width" secondItem="rBi-ow-1Xc" secondAttribute="width" multiplier="1:4" id="tCx-WL-Quy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Flv-ad-ZOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="973"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="Twu-1N-4LQ">
+            <objects>
+                <collectionViewController id="hGb-uX-KgT" customClass="XMAPICollectionViewController" customModule="API" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mwj-Cp-WaS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="GUH-6n-JeZ"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Rvc-8y-hlg" customClass="XMAPICollectionViewCell" customModule="API" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-1I-K8L" customClass="XMInvertedImageView" customModule="API" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="-25" width="100" height="150"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl" translatesAutoresizingMaskIntoConstraints="NO" id="tga-pZ-Vh9">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="100" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="tga-pZ-Vh9" firstAttribute="height" secondItem="dRR-1I-K8L" secondAttribute="height" id="1oL-UT-g2p"/>
+                                                <constraint firstItem="tga-pZ-Vh9" firstAttribute="centerX" secondItem="dRR-1I-K8L" secondAttribute="centerX" id="4qs-W4-vOg"/>
+                                                <constraint firstAttribute="width" secondItem="dRR-1I-K8L" secondAttribute="height" multiplier="1:1.5" id="Lpz-Du-pxb"/>
+                                                <constraint firstItem="tga-pZ-Vh9" firstAttribute="width" secondItem="dRR-1I-K8L" secondAttribute="width" id="Ncx-pp-MPn"/>
+                                                <constraint firstItem="tga-pZ-Vh9" firstAttribute="centerY" secondItem="dRR-1I-K8L" secondAttribute="centerY" id="lGm-RB-3Rl"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="dRR-1I-K8L" firstAttribute="centerY" secondItem="Rvc-8y-hlg" secondAttribute="centerY" id="QTo-yz-ebf"/>
+                                    <constraint firstItem="dRR-1I-K8L" firstAttribute="height" secondItem="Rvc-8y-hlg" secondAttribute="height" id="byh-Ms-1D5"/>
+                                    <constraint firstItem="dRR-1I-K8L" firstAttribute="centerX" secondItem="Rvc-8y-hlg" secondAttribute="centerX" id="fi3-Kw-j7c"/>
+                                    <constraint firstItem="dRR-1I-K8L" firstAttribute="width" secondItem="Rvc-8y-hlg" secondAttribute="width" id="hBd-zJ-y6c"/>
+                                    <constraint firstItem="dRR-1I-K8L" firstAttribute="width" secondItem="Rvc-8y-hlg" secondAttribute="width" multiplier="1:1" id="hhy-t9-MWY"/>
+                                </constraints>
+                                <size key="customSize" width="100" height="100"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="byh-Ms-1D5"/>
+                                        <exclude reference="hBd-zJ-y6c"/>
+                                    </mask>
+                                </variation>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="hGb-uX-KgT" id="sih-sD-zPq"/>
+                            <outlet property="delegate" destination="hGb-uX-KgT" id="eG3-n7-36R"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="N2y-1c-aJ2"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LdY-xF-fv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953.5" y="267.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="girl" width="240" height="360"/>
+    </resources>
+</document>
