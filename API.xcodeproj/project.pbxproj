@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5ACAF9701CEAACD700F54A6C /* XMInvertedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAF96F1CEAACD700F54A6C /* XMInvertedImageView.swift */; };
+		5ACAF9781CEC05E500F54A6C /* XMDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAF9771CEC05E500F54A6C /* XMDetailCollectionViewCell.swift */; };
+		5ACAF97A1CEC087100F54A6C /* XMWaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAF9791CEC087100F54A6C /* XMWaterFallFlowLayout.swift */; };
 		5AE7E29E1CE9A2EC00F97219 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7E29D1CE9A2EC00F97219 /* AppDelegate.swift */; };
 		5AE7E2A31CE9A2EC00F97219 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE7E2A11CE9A2EC00F97219 /* Main.storyboard */; };
 		5AE7E2A51CE9A2EC00F97219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE7E2A41CE9A2EC00F97219 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		5ACAF96F1CEAACD700F54A6C /* XMInvertedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMInvertedImageView.swift; sourceTree = "<group>"; };
+		5ACAF9771CEC05E500F54A6C /* XMDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		5ACAF9791CEC087100F54A6C /* XMWaterFallFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMWaterFallFlowLayout.swift; sourceTree = "<group>"; };
 		5AE7E29A1CE9A2EC00F97219 /* API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = API.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE7E29D1CE9A2EC00F97219 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AE7E2A21CE9A2EC00F97219 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				5AE7E2EB1CE9ADC400F97219 /* XMAPICollectionViewLayout.swift */,
+				5ACAF9791CEC087100F54A6C /* XMWaterFallFlowLayout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				5AE7E2E91CE9ADB600F97219 /* XMAPICollectionReusableHeaderView.swift */,
 				5AE7E2ED1CE9AF9600F97219 /* XMAPICollectionViewCell.swift */,
 				5ACAF96F1CEAACD700F54A6C /* XMInvertedImageView.swift */,
+				5ACAF9771CEC05E500F54A6C /* XMDetailCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,8 +351,10 @@
 				5AE7E2EA1CE9ADB600F97219 /* XMAPICollectionReusableHeaderView.swift in Sources */,
 				5AE7E2E21CE9A78500F97219 /* XMAPICollectionViewController.swift in Sources */,
 				5ACAF9701CEAACD700F54A6C /* XMInvertedImageView.swift in Sources */,
+				5ACAF97A1CEC087100F54A6C /* XMWaterFallFlowLayout.swift in Sources */,
 				5AE7E2EC1CE9ADC400F97219 /* XMAPICollectionViewLayout.swift in Sources */,
 				5AE7E29E1CE9A2EC00F97219 /* AppDelegate.swift in Sources */,
+				5ACAF9781CEC05E500F54A6C /* XMDetailCollectionViewCell.swift in Sources */,
 				5AE7E2EE1CE9AF9600F97219 /* XMAPICollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

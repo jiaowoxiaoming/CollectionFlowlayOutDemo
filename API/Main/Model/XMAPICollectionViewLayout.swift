@@ -60,6 +60,15 @@ class XMAPICollectionViewLayout: UICollectionViewFlowLayout {
         return true
     }
     
+    override func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+        
+        let layoutAttributes = super.layoutAttributesForItemAtIndexPath(indexPath)
+        if elementKind == UICollectionElementKindSectionHeader {
+            print(layoutAttributes?.frame)
+        }
+        return layoutAttributes
+    }
+    
     /**
      用来计算出rect这个范围内所有cell的UICollectionViewLayoutAttributes，
      并返回。

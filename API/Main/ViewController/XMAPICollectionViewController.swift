@@ -13,11 +13,17 @@ private let reuseIdentifier = "XMAPICollectionViewCell"
 class XMAPICollectionViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout,XMAPICollectionViewLayoutDelegate {
 
     var apiLayout:XMAPICollectionViewLayout!
-    var imageArray = ["","","","",""]
+    lazy var listDictionary: NSDictionary? = {
+        var string = NSBundle.pathForResource("MobApiCategory", ofType: "plist", inDirectory: NSBundle.mainBundle().bundlePath)
+       var dictionary = NSDictionary.init(contentsOfFile: string!)
+        
+       return dictionary
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -58,13 +64,16 @@ class XMAPICollectionViewController: UICollectionViewController,UICollectionView
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return imageArray.count
+        return listDictionary!["ApiCategory"]!["SectionTitlesArray"]!!.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell:XMAPICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! XMAPICollectionViewCell
     
+        cell.detailListArray = listDictionary!["ApiCategory"]!["CellTitlesArray"]!!.objectAtIndex(indexPath.row) as? NSArray
+        
+        
         // Configure the cell
     
         return cell
@@ -78,21 +87,21 @@ class XMAPICollectionViewController: UICollectionViewController,UICollectionView
         }
         return view!
     }
-    
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        if self.collectionView!.collectionViewLayout.isKindOfClass(XMAPICollectionViewLayout.self) {
-            self.collectionView!.setCollectionViewLayout(UICollectionViewFlowLayout(), animated: true)
-        }else {
-            self.collectionView!.setCollectionViewLayout(self.apiLayout, animated: true)
-        }
-    }
-    
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
 
-        
-    }
+//    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+//        
+//        if self.collectionView!.collectionViewLayout.isKindOfClass(XMAPICollectionViewLayout.self) {
+//            self.collectionView!.setCollectionViewLayout(UICollectionViewFlowLayout(), animated: true)
+//        }else {
+//            self.collectionView!.setCollectionViewLayout(self.apiLayout, animated: true)
+//        }
+//    }
+//    
+//    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        
+//
+//        
+//    }
     // MARK: UICollectionViewDelegate
 
     /*

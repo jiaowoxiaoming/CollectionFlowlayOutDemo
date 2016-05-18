@@ -112,7 +112,7 @@ class XMInvertedImageView: UIView {
             self.reflectionImageView.removeFromSuperview()
 //            self.reflectionImageView = nil
             
-            layer.contents = UIImage(imageLiteral: "girl").CGImage
+//            layer.contents = UIImage(imageLiteral: "girl").CGImage
             // 光栅化
             layer.shouldRasterize = true
             layer.rasterizationScale = UIScreen.mainScreen().scale
