@@ -73,7 +73,7 @@ class XMAPICollectionViewController: UICollectionViewController,UICollectionView
     
         cell.detailListArray = listDictionary!["ApiCategory"]!["CellTitlesArray"]!!.objectAtIndex(indexPath.row) as? NSArray
         
-        
+//        cell.backgroundColor = UIColor().randColor();
         // Configure the cell
     
         return cell

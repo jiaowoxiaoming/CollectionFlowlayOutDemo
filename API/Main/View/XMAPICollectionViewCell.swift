@@ -26,7 +26,7 @@ class XMAPICollectionViewCell: UICollectionViewCell ,UICollectionViewDataSource,
     
     override func awakeFromNib() {
         
-        self.collectionView.backgroundColor = UIColor.brownColor()
+        self.collectionView.backgroundColor = UIColor.clearColor()
 //        self.collectionView.registerClass(XMDetailCollectionViewCell.self, forCellWithReuseIdentifier: detailReuseIdentifier)
         
         let layout:XMWaterFallFlowLayout = self.collectionView.collectionViewLayout as! XMWaterFallFlowLayout
@@ -44,27 +44,10 @@ class XMAPICollectionViewCell: UICollectionViewCell ,UICollectionViewDataSource,
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell:XMDetailCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(detailReuseIdentifier, forIndexPath: indexPath) as! XMDetailCollectionViewCell
-//        print(cell)
+
         cell.detailListLabel.text = detailListArray?.objectAtIndex(indexPath.row) as? String
-//        let remainder :Int = indexPath.row%colletionCell
-//        
-//        let currentRow :Int = indexPath.row/colletionCell
-//        
-//        let currentHeight :CGFloat = hArr[indexPath.row]
-//        
-//        let positonX = CGFloat( (Int(wd) / colletionCell - 10) * remainder + 5 * (remainder + 1) )
-//        
-//        var positionY = CGFloat((currentRow+1)*5)
-//        
-//        for i in 0..<currentRow{
-//            
-//            let position = remainder + i * colletionCell
-//            
-//            positionY += hArr[position]
-//            
-//        }
-//        
-//        cell.frame=CGRectMake(positonX, positionY,CGFloat(Int(wd)/colletionCell - 10),currentHeight) //重新定义cell位置、宽高
+        
+        cell.contentView.backgroundColor = UIColor().randColor()
         
 
         return cell

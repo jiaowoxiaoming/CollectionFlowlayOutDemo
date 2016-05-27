@@ -124,7 +124,7 @@ class XMInvertedImageView: UIView {
             
             transform = CATransform3DScale(transform, 1.0, -1.0, 0.0)
             
-            transform = CATransform3DRotate(transform, CGFloat(M_PI / 2), 4, 0, 5)
+//            transform = CATransform3DRotate(transform, CGFloat(M_PI / 2), 4, 0, 5)
 //
 ////            transform = CATransform3DScale(transform, 1.0, -2.0, 0.0)
 ////            transform = CATransform3DTranslate(transform, 30, 0, 0)

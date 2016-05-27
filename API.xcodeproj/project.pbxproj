@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A17515F1CF6F9F1005B3734 /* XMColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17515E1CF6F9F1005B3734 /* XMColor.swift */; };
 		5ACAF9701CEAACD700F54A6C /* XMInvertedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAF96F1CEAACD700F54A6C /* XMInvertedImageView.swift */; };
 		5ACAF9781CEC05E500F54A6C /* XMDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAF9771CEC05E500F54A6C /* XMDetailCollectionViewCell.swift */; };
 		5ACAF97A1CEC087100F54A6C /* XMWaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAF9791CEC087100F54A6C /* XMWaterFallFlowLayout.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A17515E1CF6F9F1005B3734 /* XMColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMColor.swift; sourceTree = "<group>"; };
 		5ACAF96F1CEAACD700F54A6C /* XMInvertedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMInvertedImageView.swift; sourceTree = "<group>"; };
 		5ACAF9771CEC05E500F54A6C /* XMDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		5ACAF9791CEC087100F54A6C /* XMWaterFallFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMWaterFallFlowLayout.swift; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A17515B1CF6F892005B3734 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5A17515E1CF6F9F1005B3734 /* XMColor.swift */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		5AE7E2911CE9A2EC00F97219 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		5AE7E2CC1CE9A37A00F97219 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5A17515B1CF6F892005B3734 /* Category */,
 				5AE7E2D41CE9A3F600F97219 /* ViewController */,
 				5AE7E2E81CE9AD7D00F97219 /* View */,
 				5AE7E2E71CE9AD7300F97219 /* Model */,
@@ -353,6 +364,7 @@
 				5ACAF9701CEAACD700F54A6C /* XMInvertedImageView.swift in Sources */,
 				5ACAF97A1CEC087100F54A6C /* XMWaterFallFlowLayout.swift in Sources */,
 				5AE7E2EC1CE9ADC400F97219 /* XMAPICollectionViewLayout.swift in Sources */,
+				5A17515F1CF6F9F1005B3734 /* XMColor.swift in Sources */,
 				5AE7E29E1CE9A2EC00F97219 /* AppDelegate.swift in Sources */,
 				5ACAF9781CEC05E500F54A6C /* XMDetailCollectionViewCell.swift in Sources */,
 				5AE7E2EE1CE9AF9600F97219 /* XMAPICollectionViewCell.swift in Sources */,
