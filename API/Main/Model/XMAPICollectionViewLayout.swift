@@ -9,9 +9,7 @@
 import UIKit
 
 protocol XMAPICollectionViewLayoutDelegate {
-//    func <#name#>(<#parameters#>) -> <#return type#> {
-//    <#function body#>
-//    }
+    func targetContentOffsetForProposedContentOffsetCaluEnd(index:Int) -> Void
 }
 
 class XMAPICollectionViewLayout: UICollectionViewFlowLayout {
@@ -122,6 +120,8 @@ class XMAPICollectionViewLayout: UICollectionViewFlowLayout {
                 adjustOffsetX = attri.center.x - centerX;
             }
         }
+    
+        self.delegate?.targetContentOffsetForProposedContentOffsetCaluEnd(Int(( proposedContentOffset.x + adjustOffsetX ) * 2 / (self.collectionView?.bounds.size.width)!))
         
         return CGPointMake(proposedContentOffset.x + adjustOffsetX, proposedContentOffset.y)
     }

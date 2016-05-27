@@ -8,11 +8,16 @@
 
 import UIKit
 
-
-
-class XMAPICollectionViewCell: UICollectionViewCell ,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,XMWaterFallFlowLayoutDelegate {
+protocol XMAPICollectionViewCellDelegate:NSObjectProtocol
+{
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath , cell: XMDetailCollectionViewCell)
+}
 
+class XMAPICollectionViewCell: UICollectionViewCell ,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,XMWaterFallFlowLayoutDelegate{
+    
+    weak var delegate:XMAPICollectionViewCellDelegate?
+    
     var detailListArray:NSArray? = nil
         {
         didSet {
@@ -57,6 +62,17 @@ class XMAPICollectionViewCell: UICollectionViewCell ,UICollectionViewDataSource,
         let b = arc4random()%80 + 80
         return CGFloat(b)
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        if self.delegate?.respondsToSelector(Selector("collectionView:didSelectItemAtIndexPath:cell:")) == true
+        {
+            self.delegate?.collectionView(collectionView, didSelectItemAtIndexPath: indexPath, cell: collectionView.cellForItemAtIndexPath(indexPath) as! XMDetailCollectionViewCell)
+        }
+        
+    }
+    
+
     
 //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 //        
